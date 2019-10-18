@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <!-- BootStartp -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "test_app/css/style.css" %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="my_jumbotron jumbotron">
+        <div class="row">
+            <div class="col-md-3">
+              <img style="width:100px; height:100px;" src="{% static "test_app/images/img.png" %}" alt="Django Icon">
+            </div>
+            <div class="col-md-9">
+              <h1>Hit addnew/ To Add New Record</h1>
+              <h1>Hit getall/ To View All Records</h1>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

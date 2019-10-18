@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Get All Records</title>
+    <!-- BootStartp -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "test_app/css/style.css" %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="my_jumbotron jumbotron">
+        <h1 style="text-align:center;">All Records</h1>
+        <div class="data_table_container">
+          {% if objects %}
+            <table>
+              <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date Of Birth</th>
+                <th>Email</th>
+              </thead>
+              {% for object in objects%}
+                <tr>
+                  <td>{{object.first_name}}</td>
+                  <td>{{object.last_name}}</td>
+                  <td>{{object.dob}}</td>
+                  <td>{{object.email}}</td>
+                </tr>
+              {% endfor%}
+
+            </table>
+          {% else%}
+            <h1>No Records</h1>
+          {% endif%}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
